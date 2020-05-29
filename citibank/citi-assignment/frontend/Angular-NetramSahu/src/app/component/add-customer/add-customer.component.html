@@ -1,0 +1,68 @@
+
+<div class="panel panel-default" style="text-align:left ; margin-top: 10px;">
+    <div class="panel-heading">
+    </div>
+    
+    <div class="panel-body">
+      <button class="btn btn-success" (click)="getAllProducts()"> Get All Customers </button> &nbsp;&nbsp;
+      <button class="btn btn-success" (click)="idProduct()"> Search Customer By Id</button> &nbsp;&nbsp;
+      <button class="btn btn-success" (click)="addProduct()"> Add New Customer</button> &nbsp;&nbsp;
+  </div>
+  </div>
+   
+  <br/><br/>
+  <thead>
+    <tr>
+      <th>Add New Customer :</th>
+    </tr>
+  </thead>
+  <br /><br />
+  <div class="col-md-6 col-md-offset-2">
+  <br/>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <tr><td>
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+        <div *ngIf="submitted && addForm.controls.firstName.errors" class="error">
+            <div class="text-danger" *ngIf="addForm.controls.firstName.errors.required">First Name is required</div>
+          </div>
+      </div></td><td>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input formControlName="lastName" placeholder="Last Name" name="lastName" class="form-control" id="lastName">
+        <div *ngIf="submitted && addForm.controls.lastName.errors" class="error">
+            <div class="text-danger" *ngIf="addForm.controls.lastName.errors.required">Last Name is required</div>
+          </div>
+      </div></td>
+      </tr>
+      <tr><td>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input formControlName="phoneNumber" placeholder="Phone Number" name="phoneNumber" class="form-control" id="phoneNumber">
+          <div *ngIf="submitted && addForm.controls.phoneNumber.errors" class="error">
+              <div class="text-danger" *ngIf="addForm.controls.phoneNumber.errors.required">Phone Number is required</div>
+            </div>
+        </div></td><td>
+          <div class="form-group">
+            <label for="ssn">SSN Number:</label>
+            <input formControlName="ssn" placeholder="SSN Number" name="ssn" class="form-control" id="ssn">
+            <div *ngIf="submitted && addForm.controls.ssn.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.ssn.errors.required">SSN Number is required</div>
+              </div>
+          </div></td>
+          </tr>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <input formControlName="address" placeholder="Address" name="address" class="form-control" id="address">
+        <div *ngIf="submitted && addForm.controls.address.errors" class="error">
+            <div class="text-danger" *ngIf="addForm.controls.address.errors.required">Address is required</div>
+          </div>
+      </div>
+
+    <button class="btn btn-success">Save</button>&nbsp; &nbsp;
+    <button class="btn btn-danger" type="reset">Cancel</button>
+  &nbsp; &nbsp;
+    <br/><br/>
+  </form>
+  </div>
