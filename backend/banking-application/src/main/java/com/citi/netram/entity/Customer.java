@@ -18,7 +18,7 @@ import lombok.Data;
  
 @Entity
 @Table(name = "customer")
-@Data
+@Data 
 public class Customer {
 	@Id   
 	@GeneratedValue(strategy= GenerationType.AUTO,generator="native"  )

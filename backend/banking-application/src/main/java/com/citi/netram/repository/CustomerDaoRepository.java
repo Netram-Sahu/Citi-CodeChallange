@@ -13,3 +13,4 @@ import com.citi.netram.entity.Customer;
 public interface CustomerDaoRepository extends JpaRepository<Customer, Integer>, JpaSpecificationExecutor<Account> {
 
 }
+ 

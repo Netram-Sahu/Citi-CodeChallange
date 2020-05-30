@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @SpringBootApplication annotation is equivalent to using 
  * @Configuration , @EnableAutoConfiguration and @ComponentScan with their default attributes
  * 
- */
+ */ 
 
 @SpringBootApplication
 public class BankingApplication {

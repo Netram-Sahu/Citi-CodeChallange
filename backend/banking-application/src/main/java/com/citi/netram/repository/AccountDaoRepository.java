@@ -10,3 +10,4 @@ import com.citi.netram.entity.Account;
 public interface AccountDaoRepository extends JpaRepository<Account, Integer>{
 
 }
+ 
