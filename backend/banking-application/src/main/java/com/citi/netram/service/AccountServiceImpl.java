@@ -16,7 +16,7 @@ import com.citi.netram.repository.AccountDaoRepository;
  * @Service annotation is used in service layer
  * 
  * */
-
+ 
 @Service
 public class AccountServiceImpl implements AccountService {
 	@Autowired

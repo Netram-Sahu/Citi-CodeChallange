@@ -18,7 +18,7 @@ public class GlobalExceptionHandler {
 		ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity<>(" Some error at server" +errorDetails, HttpStatus.NOT_FOUND);
 	}
-
+ 
 
 	@ExceptionHandler(AccountNotFoundException.class)
 	public ResponseEntity<?> resourceNotFoundException(AccountNotFoundException ex, WebRequest request) {

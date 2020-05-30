@@ -12,7 +12,7 @@ import lombok.Data;
  * @Entity annotation specifies that the class is an entity and is mapped to a database table
  * @Data is a convenient shortcut annotation that bundles the features of 
  * @ToString, @EqualsAndHashCode, @Getter / @Setter and @RequiredArgsConstructor together.
- */
+ */ 
 
 @Entity
 @Table(name = "account")
